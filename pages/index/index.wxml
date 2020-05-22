@@ -100,7 +100,16 @@
 			</view>
 		</view>
 		<!-- 最新资讯模块 -->
-		<view class="consultation"></view>
+		<view class="consultation">
+			<view class="newCon"> 最新资讯:</view>
+			<swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
+				<block wx:for="{{noticeList}}" wx:key="index">
+					<swiper-item catchtouchmove="stopTouchMove">
+						<view class="swiper_item">{{item.content}}</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
 		<!-- 热门服务 -->
 		<view class="hot">
 			<view class="hotTitle">热门服务</view>
@@ -116,8 +125,10 @@
 					<view class=" {{sevTab == index ?'under':''}}"></view>
 				</view>
 			</view>
-				<view wx:if="{{sevTitle[0].isAcitve}}">
-				个人服务
+			<view wx:if="{{sevTitle[0].isAcitve}}" class="personal">
+					<view class="personalSev" wx:for="[1,2,3]" wx:key="index">
+						
+					</view>
 			</view>
 			<view wx:elif="{{sevTitle[1].isAcitve}}">
 				商家服务

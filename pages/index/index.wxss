@@ -89,7 +89,9 @@
   /* border: #c4c4c4 2rpx solid; */
   border-radius: 30rpx;
   background-color: #fff;
-  box-shadow: 0 0 0 2rpx #c4c4c4;
+  -moz-box-shadow: 0rpx 0rpx 4rpx #c8c4c4;
+  -webkit-box-shadow: 0px 0px 4rpx #c8c4c4;
+  box-shadow: 0px 0px 8rpx #c8c4c4;
   padding: 0 32rpx;
   box-sizing: border-box;
   margin-bottom: 40rpx;
@@ -226,6 +228,24 @@
   border-radius: 20rpx;
   background-color: #fff;
 }
+.consultation {
+  display: flex;
+  overflow: hidden;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  /* padding-top: 30rpx; */
+  line-height: 84rpx;
+}
+.swiper_container {
+  width: 60%;
+  font-size: 28rpx;
+}
+.newCon {
+  margin-right: 20rpx;
+  /* font-size: 24rpx; */
+  color: #ff4f00;
+  font-weight: 700;
+}
 
 .hot {
   width: 100%;
@@ -283,10 +303,29 @@
 }
 .under {
   position: absolute;
-  bottom: 5rpx;
+  bottom: 2rpx;
   left: 50%;
   margin-left: -30rpx;
   width: 60rpx;
-  height: 4rpx;
+  height: 6rpx;
   background-color: red;
 }
+.personalSev {
+  width: 340rpx;
+  height: 400rpx;
+  background-color: pink;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.personalSev:nth-of-type(2n) {
+  margin-right: 0;
+}
+.personal {
+  margin-top: 50rpx;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}  

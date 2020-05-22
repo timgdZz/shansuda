@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import API from "../../utils/api.js";
 const app = getApp()
 
 Page({
@@ -15,6 +16,7 @@ Page({
     autoplay: false,
     interval: 2000,
     duration: 500,
+    // 图标
     icon: [
       {path:'../../static/image/disinfect.png',title:"消毒杀菌",url:"../disinfect/disinfect"},
       {path:'../../static/image/phone.png',title:"手机维修",url:"../phone/phone"},
@@ -27,13 +29,16 @@ Page({
       {path:'../../static/image/laundry.png',title:"洗衣修鞋",url:"../laundry/laundry"},
       {path:'../../static/image/more.png',title:"更多",url:"../more/more"}
     ],
+    // 服务
     tabarTitle: [
       {title:'服务',isAcitve: true},
       {title:'活动',isAcitve: false},
       {title:'口碑',isAcitve: false},
       {title:'品牌',isAcitve: false},
     ],
+    // 服务索引
     currentTab: 0,
+    // 热门服务
     hotText: [
       {text:'接送孩子',color:'#fffae2'},
       {text:'带孩子',color:'#fce9db'},
@@ -48,23 +53,34 @@ Page({
       {text:'月子中心',color:'#e0f9f6'},
       {text:'应聘家政',color:'#f8f3cd'}
     ],
+    // 个人服务
     sevTitle: [
       {title:'个人服务',isAcitve: true},
       {title:'商家服务',isAcitve: false},
       {title:'附近服务',isAcitve: false},
     ],
-    sevTab: 0
+    // 个人服务索引
+    sevTab: 0,
+    // 公告
+    noticeList:[
+      {content: '家政服务'},
+      {content: '保洁打扫'},
+      {content: '保姆'},
+      {content: '求导购'},
+    ]
   },
   //事件处理函数
   onLoad: function() {
-
+    // console.group(API.getClickNum)
+    // app.fetch(API.getClickNum,'post',{},(err,data) => {
+    //   console.log(data)
+    // })
   },
   tabbarActive(e) {
     var that = this
  
     var index = e.currentTarget.dataset.active
     if(index == that.data.currentTab) {
-      console.log(index)
       return false
     } else {
       that.setData({
@@ -109,6 +125,9 @@ Page({
         }
       });
     }
+  },
+  stopTouchMove() {
+    return false;
   }
 
 })

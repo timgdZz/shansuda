@@ -1,11 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/mine/mine",
+    "pages/map/map",
     "pages/release/release",
     "pages/shop/shop",
-    "pages/map/map",
+    "pages/mine/mine",
+    "pages/logs/logs",
     "pages/disinfect/disinfect",
     "pages/phone/phone",
     "pages/nenny/nenny",
@@ -62,6 +62,12 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+  
 }
