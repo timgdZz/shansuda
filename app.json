@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/release/release",
+    "pages/shop/shop",
+    "pages/map/map",
+    "pages/disinfect/disinfect",
+    "pages/phone/phone",
+    "pages/nenny/nenny",
+    "pages/cleaning/cleaning",
+    "pages/Conduit/Conduit",
+    "pages/moving/moving",
+    "pages/plumber/plumber",
+    "pages/hourlyWork/hourlyWork",
+    "pages/laundry/laundry",
+    "pages/more/more"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/image/home.png",
+        "selectedIconPath": "static/image/home.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "static/image/map.png",
+        "selectedIconPath": "static/image/map.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布需求",
+        "iconPath": "static/image/need.png",
+        "selectedIconPath": "static/image/need.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "static/image/shop.png",
+        "selectedIconPath": "static/image/shop.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/image/mine.png",
+        "selectedIconPath": "static/image/mine.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

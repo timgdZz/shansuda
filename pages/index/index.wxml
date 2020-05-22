@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<!-- 导航栏 -->
+<view class="indexBox">
+	<view class="box">
+		<!--轮播图 -->
+		<view class="swiper">
+			<view class="Geography">
+				<image src="../../static/image/position.png"></image>
+				<text>1231</text>
+			</view>
+			<swiper ndicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true' indicator-dots="true" indicator-active-color="#ff6203" class="swiperBox">
+				<block>
+					<swiper-item class="demo-text-1">
+						<image src="../../static/image/banner.png" mode="scaleToFill"></image>
+					</swiper-item>
+					<swiper-item class="demo-text-1">
+						<image src="../../static/image/banner.png"></image>
+					</swiper-item>
+					<swiper-item class="demo-text-1">
+						<image src="../../static/image/banner.png"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<!-- 导航 -->
+
+		<view class="banner">
+			<view class="bannerBox">
+				<view wx:for="{{icon}}" wx:key="index" class="iconBox">
+					<navigator url='{{item.url}}' hover-class="noshadow">
+						<!-- <image :src="{{icon}}[index].path"></image> -->
+						<view>
+							<image src="{{item.path}}"></image>
+						</view>
+						{{item.title}}
+					</navigator>
+				</view>
+			</view>
+		</view>
+		<!-- 生活服务 -->
+		<view class="serve">
+			<view class="tabbar">
+				<text wx:for="{{tabarTitle}}"  bindtap="tabbarActive" data-active="{{index}}" wx:key="index" class=" {{currentTab == index ?'tabbarActive':''}}">
+				{{item.title}}
+				</text>
+			</view>
+			<view wx:if="{{tabarTitle[0].isAcitve}}" class="serviceBox">
+				<view class="serviceBoxTop">
+					<view class="errands">
+						<view class="agency">跑腿代办</view>
+						<view class="major">专业信赖 服务到家</view>
+						<view class="next">GO ></view>
+					</view>
+					<view class="distribution">
+						<view class="distributionBox">
+							<view class="agency">同城配送</view>
+							<view class="major"> 便捷下单 及时送达</view>
+							<view class="next">GO ></view>
+						</view>
+						<view class="technology">
+							<view class="techServices">
+								<view class="agency">技能服务</view>
+								<view class="major">专业人员</view>
+								<view class="major">提供技术</view>
+								<view class="major">保障</view>
+							</view>
+							<view class="conServices">
+								<view class="agency">便民服务</view>
+								<view class="major">便利生活</view>
+								<view class="major">提供专业</view>
+								<view class="major">服务</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="openShop">
+					<view class="person">
+						<view class="agency" style="color:#fff">个人开店创业</view>
+						<view class="major" style="color:#fff;letter-spacing:10rpx">个人业主入住</view>
+						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#37bcff">GO ></view>
+					</view>
+					<view class="business">
+						<view class="agency" style="color:#fff">我是商家开店 </view>
+						<view class="major" style="color:#fff;letter-spacing:12rpx">品牌商家入驻</view>
+						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#fb7171">GO ></view>
+					</view>
+				</view>
+			</view>
+			<!-- 活动 -->
+			<view wx:elif="{{tabarTitle[1].isAcitve}}">
+				{{tabarTitle[1].title}} {{tabarTitle[1].isAcitve}}
+			</view>
+			<!-- 口碑 -->
+			<view wx:elif="{{tabarTitle[2].isAcitve}}">
+				{{tabarTitle[2].title}} {{tabarTitle[2].isAcitve}}
+			</view>
+			<!-- 品牌 -->
+			<view wx:else>
+				{{tabarTitle[3].title}} {{tabarTitle[3].isAcitve}}
+			</view>
+		</view>
+		<!-- 最新资讯模块 -->
+		<view class="consultation"></view>
+		<!-- 热门服务 -->
+		<view class="hot">
+			<view class="hotTitle">热门服务</view>
+			<view class="hotContent">
+				<view class="hotText" wx:for="{{hotText}}" wx:key="index" style="background-color:{{item.color}}">{{item.text}}</view>
+			</view>
+		</view>
+		<!-- 选择服务 -->
+		<view>
+			<view class="selectService">
+				<view wx:for="{{sevTitle}}" wx:key="index" bindtap="sevActive" data-active="{{index}}">
+					<text>{{item.title}}</text>
+					<view class=" {{sevTab == index ?'under':''}}"></view>
+				</view>
+			</view>
+				<view wx:if="{{sevTitle[0].isAcitve}}">
+				个人服务
+			</view>
+			<view wx:elif="{{sevTitle[1].isAcitve}}">
+				商家服务
+			</view>
+			<view wx:else>
+				附近服务
+			</view>
+		</view>
+	</view>
+</view>
