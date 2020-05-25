@@ -11,7 +11,7 @@
 			<swiper ndicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true' indicator-dots="true" indicator-active-color="#ff6203" class="swiperBox">
 				<block>
 					<swiper-item class="demo-text-1">
-						<image src="../../static/image/banner.png" mode="scaleToFill"></image>
+						<image src="../../static/image/banner.png"></image>
 					</swiper-item>
 					<swiper-item class="demo-text-1">
 						<image src="../../static/image/banner.png"></image>
@@ -44,18 +44,18 @@
 				{{item.title}}
 				</text>
 			</view>
-			<view wx:if="{{tabarTitle[0].isAcitve}}" class="serviceBox">
+			<view wx:if="{{tabarTitle[0].isAcitve && currentTab == 0 }}" class="serviceBox">
 				<view class="serviceBoxTop">
 					<view class="errands">
 						<view class="agency">跑腿代办</view>
 						<view class="major">专业信赖 服务到家</view>
-						<view class="next">GO ></view>
+						<view class="next"><text>GO ></text></view>
 					</view>
 					<view class="distribution">
 						<view class="distributionBox">
 							<view class="agency">同城配送</view>
 							<view class="major"> 便捷下单 及时送达</view>
-							<view class="next">GO ></view>
+							<view class="next"><text>GO ></text></view>
 						</view>
 						<view class="technology">
 							<view class="techServices">
@@ -77,26 +77,82 @@
 					<view class="person">
 						<view class="agency" style="color:#fff">个人开店创业</view>
 						<view class="major" style="color:#fff;letter-spacing:10rpx">个人业主入住</view>
-						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#37bcff">GO ></view>
+						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#37bcff"><text>GO ></text></view>
 					</view>
 					<view class="business">
 						<view class="agency" style="color:#fff">我是商家开店 </view>
 						<view class="major" style="color:#fff;letter-spacing:12rpx">品牌商家入驻</view>
-						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#fb7171">GO ></view>
+						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#fb7171"><text>GO ></text></view>
 					</view>
 				</view>
 			</view>
 			<!-- 活动 -->
-			<view wx:elif="{{tabarTitle[1].isAcitve}}">
-				{{tabarTitle[1].title}} {{tabarTitle[1].isAcitve}}
+			<view wx:elif="{{tabarTitle[1].isAcitve || currentTab == 1 }}" class="activity">
+				<view class="selected">
+					<view class="selectedT">
+						<text>商家精选</text>
+					</view>
+					<view class="introduce">
+						<view>优质服务</view>
+						<view>专业高效的优质服务</view>
+					</view>
+					<view class="selectedBox">
+						<view class="selectedBoxTitle">保洁清洗</view>
+						<view class="number">已服务29万</view>
+					</view>
+				</view>
+				<view class="activityR">
+					<view class="activityT">
+						<view class="activityTitle">全屋大扫除</view>
+						<view class="discount">最高立减1060元</view>
+						<view class="next"><text>GO ></text></view>
+					</view>
+					<view class="activityB">
+						<view class="activityTitle">春节擦玻璃</view>
+						<view class="discount">低至7折</view>
+						<view class="next"><text>GO ></text></view>
+						<!-- <image src="../../static/image/banner.png"></image> -->
+					</view>
+				</view>
 			</view>
 			<!-- 口碑 -->
-			<view wx:elif="{{tabarTitle[2].isAcitve}}">
-				{{tabarTitle[2].title}} {{tabarTitle[2].isAcitve}}
+			<view wx:elif="{{tabarTitle[2].isAcitve || currentTab == 2 }}">
+				<!-- {{tabarTitle[2].title}} {{tabarTitle[2].isAcitve}} -->
+				<view class="section">
+					<scroll-view class="scroll-view_H" scroll-x>
+						<view class="scroll-view-item_H" wx:for="[1,2,3]" wx:key="index">
+							<view class="scrollTop">
+								<view class="portrait">
+									<image src="../../static/image/cleaning.png"></image>
+								</view>
+								<view class="scrollTopL">
+									<view class="nickName">洋洋</view>
+									<view class="label">
+										<view><text>专业工具</text></view>
+									</view>
+								</view>
+
+							</view>
+							<view class="scrollCenter">
+								师傅很专业, 态度也很好呢, 空调修完产生的冷风很充足,解决了制冷的大问题,还告诉我有三个月的保修,很负责
+							</view>
+							<view class="scrollImage">
+								<image src="../../static/image/banner.png"></image>
+								<image src="../../static/image/banner.png"></image>
+								<image src="../../static/image/banner.png"></image>
+							</view>
+						</view>
+					</scroll-view>
+				</view>
 			</view>
 			<!-- 品牌 -->
 			<view wx:else>
-				{{tabarTitle[3].title}} {{tabarTitle[3].isAcitve}}
+				<!-- {{tabarTitle[3].title}} {{tabarTitle[3].isAcitve}} -->
+				<scroll-view class="brand" scroll-x>
+					<view class="brandX" wx:for="[1,2,3]" wx:key="index">
+						<!-- <image ></image> -->
+					</view>
+				</scroll-view>
 			</view>
 		</view>
 		<!-- 最新资讯模块 -->
@@ -126,9 +182,9 @@
 				</view>
 			</view>
 			<view wx:if="{{sevTitle[0].isAcitve}}" class="personal">
-					<view class="personalSev" wx:for="[1,2,3]" wx:key="index">
-						
-					</view>
+				<view class="personalSev" wx:for="{{person[2]}}" wx:key="index">
+
+				</view>
 			</view>
 			<view wx:elif="{{sevTitle[1].isAcitve}}">
 				商家服务

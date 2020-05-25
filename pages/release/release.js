@@ -4,7 +4,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    title:[
+      {name:'家政服务'},
+      {name:'商务服务'},
+      {name:'汽车服务'},
+      {name:'装修建材'},
+      {name:'教育培训'},
+      {name:'婚庆摄影'},
+      {name:'宠物服务'},
+      {name:'批发采购'},
+      {name:'丽人美容'}
+    ],
+    selectTab: 0 
   },
 
   /**
@@ -53,7 +64,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    // console.log(1)
+    // this.setData({
+    //   selectTab: this.data.selectTab + 1
+    // })
+    // console.log(this.data.selectTab)
   },
 
   /**
@@ -61,5 +76,13 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  selectTitle(e){
+    console.log(e.currentTarget.dataset.index)
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      selectTab: index
+    })
+    console.log(this.data.selectTab)
   }
 })

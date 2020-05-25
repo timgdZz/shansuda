@@ -36,20 +36,5 @@ App({
   globalData: {
     userInfo: null
   },
-  fetch(url,method,data,callback) {
-    wx.request({
-      url,
-      method: method,
-      data:data,
-      header: {
-        'Content-Type':'application/json'
-      },
-      success(res) {
-        callback(null,res.data);
-      },
-      faile(e) {
-        callback(e)
-      }
-    })
-  }
+  
 })

@@ -1,3 +1,22 @@
-<view>
-发布需求
+<view class="release">
+  <view class="releseLeft">
+    <view  wx:for="{{title}}" wx:key="index" data-index="{{index}}" bindtap="selectTitle" class="{{selectTab == index ?'active releseTitle':'releseTitle'}}">
+      {{item.name}}
+    </view>
+  </view>
+  <view class="releseRight">
+    <view class="contentBox" wx:for="[1,2}" wx:key="index">
+      <view class="boxTitle">
+        热门分类
+      </view>
+      <view class="boxSelect">
+        <view class="boxIcon" wx:for="[1,2,3,4,5]" wx:key="index">
+          <view>
+            <image src="../../static/image/banner.png"></image>
+          </view>
+          <text>保姆月嫂</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

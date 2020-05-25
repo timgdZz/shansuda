@@ -1,8 +1,7 @@
 //index.js
 //获取应用实例
-import API from "../../utils/api.js";
 const app = getApp()
-
+var api = require("../../utils/api")
 Page({
   data: {
     motto: 'Hello World',
@@ -37,7 +36,7 @@ Page({
       {title:'品牌',isAcitve: false},
     ],
     // 服务索引
-    currentTab: 0,
+    currentTab: 3,
     // 热门服务
     hotText: [
       {text:'接送孩子',color:'#fffae2'},
@@ -67,14 +66,27 @@ Page({
       {content: '保洁打扫'},
       {content: '保姆'},
       {content: '求导购'},
-    ]
+    ],
+    imageWidth:0, 
+    imageHeight:0,
+    person:[
+      [
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+      [{}],
+      [{},{},{}],
+      [{}],
+      [{}],
+      [{}],
+    ],
+    page:2
   },
   //事件处理函数
   onLoad: function() {
-    // console.group(API.getClickNum)
-    // app.fetch(API.getClickNum,'post',{},(err,data) => {
-    //   console.log(data)
-    // })
   },
   tabbarActive(e) {
     var that = this
@@ -128,6 +140,16 @@ Page({
   },
   stopTouchMove() {
     return false;
-  }
+  },
+  onReachBottom() {
+    // // console.log(page + 1 )
+    // page = page + 1
+    // console.log(page)
+  },
+  // async init () {
+  //   console.log(api)
+  //   // await api.showLoading() // 显示loading
+
+  // },
 
 })

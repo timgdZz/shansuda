@@ -61,6 +61,13 @@
 					"id": -1,
 					"name": "pages/map/map",
 					"pathName": "pages/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/release/release",
+					"pathName": "pages/release/release",
 					"scene": null
 				}
 			]
