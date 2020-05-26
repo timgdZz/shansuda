@@ -36,7 +36,7 @@ Page({
       {title:'品牌',isAcitve: false},
     ],
     // 服务索引
-    currentTab: 3,
+    currentTab: 0,
     // 热门服务
     hotText: [
       {text:'接送孩子',color:'#fffae2'},
@@ -137,6 +137,16 @@ Page({
         }
       });
     }
+  },
+  goAgency() {
+      wx.navigateTo({
+        url: '../agency/agency'
+      })
+  },
+  goAdress() {
+    wx.navigateTo({
+      url: '../pickAdress/pickAdress'
+    })
   },
   stopTouchMove() {
     return false;

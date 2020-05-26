@@ -1,0 +1,12 @@
+<view class="box">
+  <view class="title">完善发货信息</view>
+  <view class="allInput">
+      <input class="inp" placeholder="取货人联系电话"></input>
+      <input class="inp" placeholder="取货人姓名"></input>
+      <input class="inp" placeholder="点击搜索取货地址"></input>
+      <input class="inp" placeholder="具体楼层门牌号"></input>
+
+      <view class="confirm" bindtap="confirm">确定</view>
+  </view>
+
+</view>

@@ -1,0 +1,100 @@
+.box {
+  position: relative;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.index {
+  display: flex;
+  background-color: #f6f6f6;
+}
+
+.index-top {
+  height: 200px;
+}
+
+.index-left {
+  flex: 1;
+  background: #fff;
+}
+
+.index-right {
+  flex: 3;
+  background-color: #f6f6f6;
+  margin-left: 24rpx;
+}
+.active {
+  border-right: 0;
+  color: #ff6302;
+  background-color: #f6f6f6;
+}
+.index-left-text {
+  width: 145rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #ececec;
+  border-right: 2rpx solid #ececec;
+}
+.index-left-text {
+  width: 100%;
+}
+.boxSelect {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.boxIcon {
+  width: 33.3%;
+  height: 175rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+
+}
+.boxIcon image {
+  margin-top: 25rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.index-right-text-top {
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  background: #f5f7f9;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+/* .rightBox {
+  padding-top: 88rpx;
+} */
+.mark {
+  position: absolute;
+  top: 200px;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.index-right-text {
+  margin-bottom: 20rpx;
+}
+.boxTitle {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}

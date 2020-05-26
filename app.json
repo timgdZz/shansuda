@@ -15,7 +15,9 @@
     "pages/plumber/plumber",
     "pages/hourlyWork/hourlyWork",
     "pages/laundry/laundry",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/agency/agency",
+    "pages/pickAdress/pickAdress"
 
   ],
   "window":{

@@ -46,12 +46,13 @@
 			</view>
 			<view wx:if="{{tabarTitle[0].isAcitve && currentTab == 0 }}" class="serviceBox">
 				<view class="serviceBoxTop">
-					<view class="errands">
-						<view class="agency">跑腿代办</view>
-						<view class="major">专业信赖 服务到家</view>
-						<view class="next"><text>GO ></text></view>
-					</view>
-					<view class="distribution">
+			
+						<view class="errands" bindtap="goAgency">
+							<view class="agency">跑腿代办</view>
+							<view class="major">专业信赖 服务到家</view>
+							<view class="next"><text>GO ></text></view>
+						</view>
+					<view class="distribution"  bindtap="goAdress">
 						<view class="distributionBox">
 							<view class="agency">同城配送</view>
 							<view class="major"> 便捷下单 及时送达</view>

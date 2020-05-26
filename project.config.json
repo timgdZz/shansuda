@@ -68,6 +68,41 @@
 					"id": -1,
 					"name": "pages/release/release",
 					"pathName": "pages/release/release",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shop",
+					"pathName": "pages/shop/shop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/agency/agency",
+					"pathName": "pages/agency/agency",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/agency/agency",
+					"pathName": "pages/agency/agency",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pickAdress/pickAdress",
+					"pathName": "pages/pickAdress/pickAdress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/release/release",
+					"pathName": "pages/release/release",
 					"scene": null
 				}
 			]

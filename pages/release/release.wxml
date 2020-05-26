@@ -1,22 +1,44 @@
 <view class="release">
-  <view class="releseLeft">
+	<view class='releseLeft'>
+
+		<scroll-view scroll-y="true" scroll-into-view="true" scroll-with-animation="true">
+
+			<block wx:for="{{title}}" wx:for-list="item" wx:key="index">
+
+				<view class="{{selectTab == item.id ?'active releseTitle':'releseTitle'}}" data-id='{{item.id}}' bindtap="selectTitle" data-index="{{index}}" id="{{item.id}}">
+
+					<text> {{item.name}}</text>
+
+				</view>
+
+			</block>
+
+		</scroll-view>
+
+	</view>
+
+	<!-- <view class="releseLeft">
     <view  wx:for="{{title}}" wx:key="index" data-index="{{index}}" bindtap="selectTitle" class="{{selectTab == index ?'active releseTitle':'releseTitle'}}">
       {{item.name}}
     </view>
-  </view>
-  <view class="releseRight">
-    <view class="contentBox" wx:for="[1,2}" wx:key="index">
-      <view class="boxTitle">
-        热门分类
-      </view>
-      <view class="boxSelect">
-        <view class="boxIcon" wx:for="[1,2,3,4,5]" wx:key="index">
-          <view>
-            <image src="../../static/image/banner.png"></image>
-          </view>
-          <text>保姆月嫂</text>
-        </view>
-      </view>
-    </view>
-  </view>
+  </view> -->
+	<view class="releseRight">
+		<view >
+			<scroll-view scroll-y="true" style="height: 1100rpx" bindscroll="scroll" scroll-with-animation="true">
+				<view class="contentBox" wx:for="{{rightText}}" wx:key="index">
+					<view class="boxTitle">
+						{{item.title}}
+					</view>
+					<view class="boxSelect">
+						<view class="boxIcon" wx:for="{{rightText[index].hot}}" wx:key="index">
+							<view>
+								<image src="../../static/image/banner.png"></image>
+							</view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
 </view>

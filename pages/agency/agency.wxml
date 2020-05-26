@@ -1,0 +1,3 @@
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}"  markers="{{markers}}"  polyline="{{polyline}}" show-location style="width: 100%; height: 1120rpx;">
+<view class="box"></view>
+</map>
