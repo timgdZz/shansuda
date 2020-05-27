@@ -103,6 +103,13 @@
 					"id": -1,
 					"name": "pages/release/release",
 					"pathName": "pages/release/release",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/serviceDetails/serviceDetail",
+					"pathName": "pages/serviceDetails/serviceDetail",
 					"scene": null
 				}
 			]

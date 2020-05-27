@@ -56,7 +56,7 @@ Page({
     sevTitle: [
       {title:'个人服务',isAcitve: true},
       {title:'商家服务',isAcitve: false},
-      {title:'附近服务',isAcitve: false},
+      // {title:'附近服务',isAcitve: false},
     ],
     // 个人服务索引
     sevTab: 0,
@@ -70,23 +70,23 @@ Page({
     imageWidth:0, 
     imageHeight:0,
     person:[
-      [
-        {},
-        {},
-        {},
-        {},
-        {},
-      ],
-      [{}],
-      [{},{},{}],
-      [{}],
-      [{}],
-      [{}],
+      {},
+      {},
+      {},
+      {},
     ],
-    page:2
+    page:2,
+    web:[
+      {url:'http://m.ctrip.com/html5/?sid=155952&allianceid=4897&ouid=index'},
+      {url:'https://www.sf-express.com/mobile/cn/sc/index.html'},
+      {url:'https://www.huolala.cn/m/index.html?sources=SZ-Y-A-P-bd'},
+      {url:'https://m.aihuishou.com/n/#/?utm_source=portal_redirect&version=new&type=0'},
+      // 途牛 妈妈好 中国网库
+    ]
   },
   //事件处理函数
   onLoad: function() {
+   
   },
   tabbarActive(e) {
     var that = this
@@ -161,5 +161,18 @@ Page({
   //   // await api.showLoading() // 显示loading
 
   // },
+  onPullDownRefresh() {
+    // console.log(1)
+    wx.showNavigationBarLoading();
+    setTimeout(function() {
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh();
+    },2000)
+  },
+  goServiceDeatil() {
+    wx.navigateTo({
+      url: '../serviceDetails/serviceDetail',
+    })
+  }
 
 })

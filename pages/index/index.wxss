@@ -1,7 +1,10 @@
 .indexBox {
+
+  background-color: #f6f6f6;
+}
+.forumCenter {
   padding: 0 25rpx;
   box-sizing: border-box;
-  background-color: #f6f6f6;
 }
 
 .box {
@@ -9,13 +12,22 @@
   box-sizing: border-box;
   background-color: #f6f6f6;
   padding-bottom: 30rpx;
-}
 
+}
+/* .topBgc {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120rpx;
+  background-color: #fe9127 ;
+  margin-bottom: 20rpx;
+  z-index: 999;
+} */
 .swiper {
   position: relative;
   width: 100%;
   border-radius: 10px;
-  margin-top: 140rpx;
+  padding-top: 20rpx;
   z-index: 9;
 }
 
@@ -35,15 +47,19 @@
 .Geography text {
   font-size: 22rpx;
 }
-
+.swiperBox {
+  width:100%;
+  height: 350rpx;
+}
 .demo-text-1 {
   border-radius: 10px;
-  height: 100%;
+  height: 350rpx;
 }
 
 .demo-text-1 image {
   width: 100%;
-  /* border-radius: 10rpx; */
+  /* height: 350rpx; */
+  border-radius: 10rpx;
 }
 
 
@@ -128,6 +144,7 @@
 }
 
 .errands {
+  position: relative;
   width: 38%;
   height: 100%;
   margin-right: 2%;
@@ -136,17 +153,40 @@
   padding-left: 28rpx;
   padding-top: 28rpx;
   box-sizing: border-box;
+  overflow: hidden;
 }
-
+.courier {
+  width: 100%;
+  height: 180rpx;
+  position: absolute;
+  bottom: -5rpx;
+  left: 0;
+}
+.courier1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 210rpx;
+  height: 150rpx;
+}
+.courier2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75rpx;
+  height: 110rpx;
+}
 .agency {
   font-size: 28rpx;
   font-weight: 700;
+  z-index: 9;
 }
 
 .major {
   font-size: 18rpx;
   font-weight: 700;
   color: #8f8f8f;
+  z-index: 9;
 }
 
 .distribution {
@@ -156,20 +196,19 @@
 }
 
 .next {
-  width: 52rpx;
-  height: 24rpx;
-  line-height: 24rpx;
-  text-align: center;
-  background-color: #fe6304;
-  font-size: 14rpx;
-  color: #ffffff;
-  border-radius: 12rpx;
+  width: 43rpx;
+  height: 21rpx;
   margin-top: 20rpx;
+}
+.next image {
+  display:block;
+  width: 100%; 
+  height: 100%;
 }
 
 
-
 .distributionBox {
+  position: relative;
   padding-left: 28rpx;
   padding-top: 28rpx;
   box-sizing: border-box;
@@ -177,9 +216,11 @@
   height: 175rpx;
   border-radius: 20rpx;
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .technology {
+
   width: 100%;
   height: 170rpx;
   margin-top: 16rpx;
@@ -188,6 +229,7 @@
 
 .techServices,
 .conServices {
+  position: relative;
   width: 50%;
   height: 100%;
   background-color: #f0f0f0;
@@ -195,6 +237,7 @@
   padding-top: 24rpx;
   padding-left: 24rpx;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .techServices {
@@ -210,6 +253,7 @@
 
 .person,
 .business {
+  position: relative;
   width: 50%;
   height: 100%;
   background-color: #f46e6e;
@@ -218,7 +262,20 @@
   padding-left: 24rpx;
   box-sizing: border-box;
 }
-
+.shopBg {
+  position: absolute;
+  top: 36rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 60rpx;
+}
+.businessImage {
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  width: 55rpx;
+  height: 75rpx;
+}
 .person {
   background-color: #5dc8fe;
   margin-right: 40rpx;
@@ -231,7 +288,7 @@
   box-shadow: 0px 0px 8rpx #c8c4c4;
   width: 100%;
   height: 84rpx;
-  border-radius: 20rpx;
+  /* border-radius: 20rpx; */
   background-color: #fff;
 }
 
@@ -257,6 +314,7 @@
 }
 
 .hot {
+  position: relative;
   width: 100%;
   min-height: 200rpx;
   background-color: #fff;
@@ -266,6 +324,15 @@
   box-shadow: 0px 0px 8rpx #c8c4c4;
   border-radius: 20rpx;
   background-repeat: no-repeat;
+  background-image: url("http://pic20.photophoto.cn/20110902/0034034471873095_b.jpg");
+  background-size: 100% 100%;
+}
+.hotBgc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hotTitle {
@@ -273,6 +340,7 @@
   padding-left: 24rpx;
   box-sizing: border-box;
   font-weight: 700;
+  z-index: 99;
 }
 
 .hotContent {
@@ -286,6 +354,7 @@
   box-sizing: border-box;
   /* padding: 0  32rpx 0 36rpx; */
   margin-top: 36rpx;
+  z-index: 99;
 }
 
 .hotText {
@@ -329,11 +398,12 @@
 .personalSev {
   width: 340rpx;
   height: 400rpx;
-  background-color: pink;
+  background-color: #fff;
   margin-right: 10rpx;
   box-sizing: border-box;
   border-radius: 20rpx;
   margin-bottom: 30rpx;
+  overflow: hidden;
 }
 
 .personalSev:nth-of-type(2n) {
@@ -380,16 +450,14 @@
   background-color: #dff1fd;
   padding: 26rpx 0 0 24rpx;
   box-sizing: border-box;
+  overflow: hidden;
 }
-
-.activityT image,
-.activityB image {
+.actImg {
   position: absolute;
-  right: 0;
   bottom: 0;
-  width: 160rpx;
-  height: 140rpx;
-  border-bottom-right-radius: 20rpx;
+  right: 0;
+  width: 180rpx;
+  height: 125rpx;
 }
 
 .activityTitle {
@@ -432,8 +500,13 @@
   padding-top: 12rpx;
   box-sizing: border-box;
 }
+.selectedBox image {
+  width: 140rpx;
+  height: 130rpx;
+}
 
 .selectedBoxTitle {
+  margin-top: 35rpx;
   font-size: 22rpx;
   font-weight: 700;
 }
@@ -535,13 +608,13 @@
 .scrollImage {
   width: 100%;
   height: 110rpx;
-  margin-top: 35rpx;
+  margin-top: 30rpx;
 }
 .scrollImage image {
   width: 130rpx;
   height: 110rpx;
   border-radius: 10rpx;
-  margin-right: 10rpx;
+  margin-right: 8rpx;
 }
 .brand {
   width: 100%;
@@ -564,4 +637,112 @@
   border-radius: 20rpx;
   display: inline-block;
   margin-right: 30rpx;
+}
+.shopServe {
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.shopServe:nth-of-type(1) {
+  border-top: 1rpx solid #f0f0f0;
+}
+.shopImage {
+  width: 150rpx;
+  height: 90rpx;
+}
+.shopImage image {
+  width: 100%;
+  height: 100%;
+}
+.shopTitle {
+  padding-left: 40rpx;
+}
+.shopTitle view:nth-of-type(1) {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #000;
+}
+.shopTitle view:nth-of-type(2) {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.brandImg {
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  width: 40rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+}
+.brandBgc {
+  display: block;
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+.personImg {
+  width: 100%;
+  height: 240rpx;
+}
+.personImg image {
+    display: block;
+  width: 100%;
+  height: 100%;
+}
+.personContent {
+  margin-top: 25rpx;
+  padding-left: 30rpx;
+  display: flex;
+}
+.personHead {
+  width: 77rpx;
+  height: 77rpx;
+  border-radius: 50%;
+}
+.personName {
+  position: relative;
+  width: 60%;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  height: 65rpx;
+}
+.personTitle {
+  position: absolute;
+  top: 0;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.personBtn {
+  position: absolute;
+  bottom: 0;
+  padding: 4rpx 8rpx;
+  box-sizing: border-box;
+  font-size: 16rpx;
+  color: #fff;
+  background-color: #fd6402;
+  border-radius: 10rpx;
+}
+.personDistance {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.distance {
+  width: 30%;
+  font-size: 18rpx;
+  margin-top: 6rpx;
+}
+.distance image {
+  display: inline-block;
+  width: 16rpx;
+  height: 21rpx;
+}
+.money {
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #fc1513;
 }

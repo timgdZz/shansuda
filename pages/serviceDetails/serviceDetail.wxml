@@ -1,0 +1,41 @@
+<!-- 头部图片 -->
+<view class="headImg">
+	<swiper indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8">
+		<swiper-item>
+			<image src="../../static/image/banner.png"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- 标题 -->
+<view class="title">
+	<view>二手置换</view>
+	<view>社区服务-二手物品</view>
+</view>
+<!-- 阴影 -->
+<view class="shadow"></view>
+<!-- 服务内容 -->
+<view class="content">
+	<view bindtap="close">服务内容</view>
+	<view>></view>
+</view>
+<view class="shadow" style="height:4rpx"></view>
+<view class="time">
+	<view>服务时间 <text style="margin-left: 40rpx; color:#7d7d7d">{{pickerSelect}}</text></view>
+	<view>
+		<picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" value="{{value}}" bindchange="bindMuit" bindcolumnchange="bindScroll">></picker>
+	</view>
+</view>
+<view class="shadow"></view>
+
+
+
+
+<!-- 遮罩动画 -->
+<!-- <view class="{{show ? 'box' :'box1'}}" bindtap="close">
+
+</view> -->
+<view class="boxAll">
+	<view class="{{show ? 'box' :'box1'}}" bindtap="close"> </view>
+
+	<view class="{{show ? 'picker' : 'picker1'}}"></view>
+</view>

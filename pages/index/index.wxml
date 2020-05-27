@@ -1,8 +1,10 @@
 <!--index.wxml-->
 <!-- 导航栏 -->
 <view class="indexBox">
-	<view class="box">
+	<!-- <view class="topBgc"></view> -->
+	<view class="box forumCenter">
 		<!--轮播图 -->
+
 		<view class="swiper">
 			<view class="Geography">
 				<image src="../../static/image/position.png"></image>
@@ -30,7 +32,7 @@
 					<navigator url='{{item.url}}' hover-class="noshadow">
 						<!-- <image :src="{{icon}}[index].path"></image> -->
 						<view>
-							<image src="{{item.path}}"></image>
+							<image src="{{item.path}}" mode="aspectFit"></image>
 						</view>
 						{{item.title}}
 					</navigator>
@@ -44,19 +46,26 @@
 				{{item.title}}
 				</text>
 			</view>
+			<!-- 服务 -->
 			<view wx:if="{{tabarTitle[0].isAcitve && currentTab == 0 }}" class="serviceBox">
 				<view class="serviceBoxTop">
-			
-						<view class="errands" bindtap="goAgency">
-							<view class="agency">跑腿代办</view>
-							<view class="major">专业信赖 服务到家</view>
-							<view class="next"><text>GO ></text></view>
+
+					<view class="errands" bindtap="goAgency">
+						<view class="agency">跑腿代办</view>
+						<view class="major">专业信赖 服务到家</view>
+						<view class="next">
+							<image src="../../static/image/1_27.png"></image>
 						</view>
-					<view class="distribution"  bindtap="goAdress">
+						<image class="courier" src="../../static/image/1_31.png" mode="aspectFit"></image>
+					</view>
+					<view class="distribution" bindtap="goAdress">
 						<view class="distributionBox">
 							<view class="agency">同城配送</view>
 							<view class="major"> 便捷下单 及时送达</view>
-							<view class="next"><text>GO ></text></view>
+							<view class="next">
+								<image src="../../static/image/1_27.png"></image>
+							</view>
+							<image src="../../static/image/1_15.png" class="courier1" mode="aspectFit"></image>
 						</view>
 						<view class="technology">
 							<view class="techServices">
@@ -64,12 +73,14 @@
 								<view class="major">专业人员</view>
 								<view class="major">提供技术</view>
 								<view class="major">保障</view>
+								<image src="../../static/image/1_21.png" class="courier2" mode="aspectFit"></image>
 							</view>
 							<view class="conServices">
 								<view class="agency">便民服务</view>
 								<view class="major">便利生活</view>
 								<view class="major">提供专业</view>
 								<view class="major">服务</view>
+								<image src="../../static/image/1_18.png" class="courier2" mode="aspectFit"></image>
 							</view>
 						</view>
 					</view>
@@ -77,13 +88,19 @@
 				<view class="openShop">
 					<view class="person">
 						<view class="agency" style="color:#fff">个人开店创业</view>
-						<view class="major" style="color:#fff;letter-spacing:10rpx">个人业主入住</view>
-						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#37bcff"><text>GO ></text></view>
+						<view class="major" style="color:#fff;letter-spacing:10rpx">个人业主入住111</view>
+						<view class="next" style="margin-top:10rpx">
+							<image src="../../static/image/1_41.png"></image>
+						</view>
+						<image class="shopBg" src="../../static/image/1_38.png" mode="aspectFit"></image>
 					</view>
 					<view class="business">
 						<view class="agency" style="color:#fff">我是商家开店 </view>
 						<view class="major" style="color:#fff;letter-spacing:12rpx">品牌商家入驻</view>
-						<view class="next" style="margin-top:5rpx;background-color:#fff;color:#fb7171"><text>GO ></text></view>
+						<view class="next" style="margin-top:10rpx">
+							<image src="../../static/image/1_47.png"></image>
+						</view>
+						<image class="businessImage" src="../../static/image/1_35.png"></image>
 					</view>
 				</view>
 			</view>
@@ -100,19 +117,26 @@
 					<view class="selectedBox">
 						<view class="selectedBoxTitle">保洁清洗</view>
 						<view class="number">已服务29万</view>
+						<image src="../../static/image/banner.png"></image>
 					</view>
 				</view>
 				<view class="activityR">
 					<view class="activityT">
 						<view class="activityTitle">全屋大扫除</view>
 						<view class="discount">最高立减1060元</view>
-						<view class="next"><text>GO ></text></view>
+						<view class="next">
+							<image src="../../static/image/1_27.png"></image>
+						</view>
+						<image src="../../static/image/banner.png" class="actImg"></image>
 					</view>
 					<view class="activityB">
 						<view class="activityTitle">春节擦玻璃</view>
 						<view class="discount">低至7折</view>
-						<view class="next"><text>GO ></text></view>
+						<view class="next">
+							<image src="../../static/image/1_27.png"></image>
+						</view>
 						<!-- <image src="../../static/image/banner.png"></image> -->
+						<image src="../../static/image/banner.png" class="actImg"></image>
 					</view>
 				</view>
 			</view>
@@ -152,6 +176,11 @@
 				<scroll-view class="brand" scroll-x>
 					<view class="brandX" wx:for="[1,2,3]" wx:key="index">
 						<!-- <image ></image> -->
+						<image class="brandImg" src="../../static/image/brand.png"></image>
+						<view>
+
+							<image class="brandBgc" src="../../static/image/1_35.png" mode="aspectFit"></image>
+						</view>
 					</view>
 				</scroll-view>
 			</view>
@@ -171,6 +200,7 @@
 		<view class="hot">
 			<view class="hotTitle">热门服务</view>
 			<view class="hotContent">
+
 				<view class="hotText" wx:for="{{hotText}}" wx:key="index" style="background-color:{{item.color}}">{{item.text}}</view>
 			</view>
 		</view>
@@ -182,13 +212,37 @@
 					<view class=" {{sevTab == index ?'under':''}}"></view>
 				</view>
 			</view>
-			<view wx:if="{{sevTitle[0].isAcitve}}" class="personal">
-				<view class="personalSev" wx:for="{{person[2]}}" wx:key="index">
-
+			<view wx:if="{{sevTitle[0].isAcitve && sevTab == 0}}" class="personal">
+				<view class="personalSev" wx:for="{{person}}" wx:key="index" bindtap="goServiceDeatil">
+					<view class="personImg">
+						<image src="../../static/image/banner.png"></image>
+					</view>
+					<view class="personContent">
+						<image class="personHead" src="../../static/image/banner.png"></image>
+						<view class="personName">
+							<text class="personTitle">家政到家服务</text>
+							<text class="personBtn">家政服务</text>
+						</view>
+					</view>
+					<view class="personDistance">
+						<view class="distance">
+						<image src="../../static/image/position.png"></image>
+						3.00km
+						</view>
+						<view class="money">¥100</view>
+					</view>
 				</view>
 			</view>
-			<view wx:elif="{{sevTitle[1].isAcitve}}">
-				商家服务
+			<view wx:elif="{{sevTitle[1].isAcitve}} || sevTab == 1 ">
+				<view class="shopServe" wx:for="[1,2]" wx:key="index">
+					<view class="shopImage">
+						<image src="../../static/image/banner.png"></image>
+					</view>
+					<view class="shopTitle">
+						<view>家政服务中心</view>
+						<view>小本生意,诚信经营</view>
+					</view>
+				</view>
 			</view>
 			<view wx:else>
 				附近服务

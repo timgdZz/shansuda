@@ -17,8 +17,9 @@
     "pages/laundry/laundry",
     "pages/more/more",
     "pages/agency/agency",
-    "pages/pickAdress/pickAdress"
-
+    "pages/pickAdress/pickAdress",
+    "pages/web/web",
+    "pages/serviceDetails/serviceDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,3 +1,9 @@
 {
-  "navigationStyle": "custom"
+ 
+  "enablePullDownRefresh" : true,
+  "onReachBottomDistance" : 50,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#fe9127",
+  "navigationBarTextStyle": "white"
 }
