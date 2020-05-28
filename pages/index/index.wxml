@@ -197,11 +197,11 @@
 			</swiper>
 		</view>
 		<!-- 热门服务 -->
-		<view class="hot">
+		<view class="hot" >
 			<view class="hotTitle">热门服务</view>
 			<view class="hotContent">
 
-				<view class="hotText" wx:for="{{hotText}}" wx:key="index" style="background-color:{{item.color}}">{{item.text}}</view>
+				<view class="hotText" wx:for="{{hotText}}" wx:key="index" style="background-color:{{item.color}}" bindtap="goList">{{item.text}}</view>
 			</view>
 		</view>
 		<!-- 选择服务 -->
@@ -233,8 +233,8 @@
 					</view>
 				</view>
 			</view>
-			<view wx:elif="{{sevTitle[1].isAcitve}} || sevTab == 1 ">
-				<view class="shopServe" wx:for="[1,2]" wx:key="index">
+			<view wx:elif="{{sevTitle[1].isAcitve}} || sevTab == 1 " style="margin-top:40rpx">
+				<view class="shopServe" wx:for="[1,2]" wx:key="index" bindtap="goShopHome">
 					<view class="shopImage">
 						<image src="../../static/image/banner.png"></image>
 					</view>

@@ -1,8 +1,8 @@
 //index.js
 const constants = require('../../utils/shop.js');
 const RIGHT_BAR_HEIGHT = 50;      // 右侧每一类的 bar 的高度（固定）
-const RIGHT_ITEM_HEIGHT = [1415,1346,224,824,224,224,224,224,100,224];     // 右侧每个子类的高度（固定）
-const LEFT_ITEM_HEIGHT = 44     // 左侧每个类的高度（固定）
+const RIGHT_ITEM_HEIGHT = [1405,1336,216,814,216,216,216,216,216,240,0];     // 右侧每个子类的高度（固定）
+const LEFT_ITEM_HEIGHT = 45     // 左侧每个类的高度（固定）
 
 Page({
   data: {
@@ -13,13 +13,19 @@ Page({
     leftToTop: 0
   },
   onLoad: function (options) {
+    // let that = this
+    // const query = wx.createSelectorQuery()
+    // query.select('.box').boundingClientRect(function(rect) {
+    //   console.log(rect)
+    // }).exec()
+    
     wx.getSystemInfo({
       success(res) {
         console.log(res.screenHeight)
         console.log(res.screenWidth)
         let phoneH = res.screenHeight / 667
         for(let a = 0 ; a < RIGHT_ITEM_HEIGHT.length; a++ ) {
-          RIGHT_ITEM_HEIGHT[a] = Math.floor(RIGHT_ITEM_HEIGHT[a] * phoneH)
+          RIGHT_ITEM_HEIGHT[a] = Math.round(RIGHT_ITEM_HEIGHT[a] * phoneH)
         }
       }
     })
@@ -36,7 +42,7 @@ Page({
     obj[constants[0].id] = totop      // 右侧第一类肯定是到顶部的距离为 0
     for (let i = 1; i < (constants.length + 1); i++) {  // 循环来计算每个子类到顶部的高度
       totop += RIGHT_ITEM_HEIGHT[i-1]
- 
+      console.log(totop)
       obj[constants[i] ? constants[i].id : 'last'] = totop    // 这个的目的是 例如有两类，最后需要 0-1 1-2 2-3 的数据，所以需要一个不存在的 'last' 项，此项即为第一类加上第二类的高度。
       // console.log(constants[i-1].id)
     }
@@ -46,10 +52,8 @@ Page({
     for (let i = 0; i < this.data.constants.length; i++) {
       let left = this.data.eachRightItemToTop[this.data.constants[i].id]
       let right = this.data.eachRightItemToTop[this.data.constants[i + 1] ? this.data.constants[i+1].id : 'last']
-      console.log(e.detail.scrollTop)
-      console.log(right,left,i)
-      if (e.detail.scrollTop < right && e.detail.scrollTop >= left) {
-        // console.log(i)
+      if (e.detail.scrollTop < right && (e.detail.scrollTop + 50 >= left) ) {
+        console.log(i)
         this.setData({
           currentLeftSelect: this.data.constants[i].id,
           leftToTop: LEFT_ITEM_HEIGHT * i

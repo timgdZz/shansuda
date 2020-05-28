@@ -1,0 +1,19 @@
+<view class="box" style="height:{{height}}px">
+	<view class="newAdress" bindtap="goAdress">
+		新增
+	</view>
+	<view class="adress">
+		<view class="adressList" wx:for="{{6}}" wx:key="index"  bindtap="goAdress">
+      <view class="adressBox">
+        <view>上海合适的话</view>
+        <view style="color:#ccc">
+          <text style="margin-right:20rpx">daidai</text><text>1325205552</text>
+        </view>
+      </view>
+      <view>
+        <image class="arrow" src="../../static/image/pickerMore.png"></image>
+      </view>
+		</view>
+	</view>
+
+</view>

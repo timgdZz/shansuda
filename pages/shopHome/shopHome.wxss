@@ -1,0 +1,197 @@
+.box {
+  background-color: #f0f0f0;
+}
+
+.headImg {
+  width: 100%;
+  height: 630rpx;
+}
+
+.headImg swiper {
+  height: 630rpx;
+}
+
+.headImg image {
+  width: 100%;
+  height: 630rpx;
+}
+
+.wx-swiper-dots {
+  position: relative;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 40rpx;
+}
+
+.title {
+  padding: 0 20rpx;
+  padding-top: 24rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.content {
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  /* color: #7d7d7d; */
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  color: #ccc;
+  font-weight: 400
+}
+
+.time {
+  width: 100%;
+  margin-top: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+
+.adress {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+
+.authentication {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  display: flex;
+  font-size: 24rpx;
+  color: #7d7d7d;
+}
+
+.authentication image {
+  display: block;
+  width: 160rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+
+.personalSev {
+  width: 340rpx;
+  height: 470rpxrpx;
+  background-color: #fff;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+}
+
+.personalSev:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.personal {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.personImg {
+  width: 100%;
+  height: 240rpx;
+}
+
+.personImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.personContent {
+  margin-top: 25rpx;
+  padding-left: 10rpx;
+  display: flex;
+}
+
+.personHead {
+  width: 77rpx;
+  height: 77rpx;
+  border-radius: 50%;
+}
+
+.personName {
+  position: relative;
+  width: 60%;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  height: 65rpx;
+}
+
+.personTitle {
+  position: absolute;
+  top: 0;
+  font-size: 24rpx;
+}
+
+.personBtn {
+  position: absolute;
+  bottom: 0;
+  padding: 4rpx 8rpx;
+  box-sizing: border-box;
+  font-size: 16rpx;
+  color: #fff;
+  background-color: #fd6402;
+  border-radius: 10rpx;
+}
+
+.personDistance {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.distance {
+  width: 30%;
+  font-size: 18rpx;
+  margin-top: 6rpx;
+}
+
+.distance image {
+  display: inline-block;
+  width: 16rpx;
+  height: 21rpx;
+}
+
+.money {
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #fc1513;
+}
+
+.Places {
+  margin-top: 10rpx;
+  height: 64rpx;
+  /* line-height: 64rpx; */
+  font-size: 24rpx;
+  color: #ccc;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}

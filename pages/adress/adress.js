@@ -4,15 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    height:'',
-    listMenu:[
-      {image:'../../static/image/need2.png',text:'需求管理',url:'../need/need'},
-      {image:'../../static/image/adress.png',text:'地址管理',url:'../adress/adress'},
-      {image:'../../static/image/shang.png',text:'成为商户',url:'../merchant/merchant'},
-      {image:'../../static/image/user.png',text:'用户协议',url:'../user/user'},
-      {image:'../../static/image/clock.png',text:'隐私协议',url:'../lock/lock'},
-      {image:'../../static/image/password.png',text:'修改密码',url:'../modify/modify'},
-    ]
+    height:''
   },
 
   /**
@@ -73,26 +65,9 @@ Page({
   onShareAppMessage: function () {
     
   },
-  goNext(e) {
-    // console.log(e.currentTarget.dataset.url)
-    var url = e.currentTarget.dataset.url
+  goAdress(e) {
     wx.navigateTo({
-      url: url,
-    })
-  },
-  goOrder() {
-    wx.navigateTo({
-      url: '../order/order',
-    })
-  },
-  goMoeny() {
-    wx.navigateTo({
-      url: '../money/money',
-    })
-  },
-  goColl() {
-    wx.navigateTo({
-      url: '../collec/collec',
+      url: '../pickAdress/pickAdress',
     })
   }
 })

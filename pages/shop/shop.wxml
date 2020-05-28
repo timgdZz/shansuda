@@ -14,7 +14,7 @@
 		</view>
 		<view class="index-right">
 			<scroll-view scroll-with-animation="true" scroll-y style="height: 100vh;" bindscroll="rightScroll" scroll-into-view="{{toView}}" >
-				<view wx:for="{{constants}}" wx:key="id" id="{{item.id}}">
+				<view wx:for="{{constants}}" wx:key="id" id="{{item.id}}" class="{{item.id}}">
 					<view class="index-right-text-top">{{item.name}}</view>
 					<view class="index-right-text" wx:for="{{item.category}}" wx:key="category_id">
 					<view class="boxTitle">{{item.category_name }}</view>

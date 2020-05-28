@@ -110,6 +110,34 @@
 					"id": -1,
 					"name": "pages/serviceDetails/serviceDetail",
 					"pathName": "pages/serviceDetails/serviceDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopHome/shopHome",
+					"pathName": "pages/shopHome/shopHome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/adress/adress",
+					"pathName": "pages/adress/adress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pickAdress/pickAdress",
+					"pathName": "pages/pickAdress/pickAdress",
 					"scene": null
 				}
 			]

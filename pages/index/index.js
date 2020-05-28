@@ -17,16 +17,16 @@ Page({
     duration: 500,
     // 图标
     icon: [
-      {path:'../../static/image/disinfect.png',title:"消毒杀菌",url:"../disinfect/disinfect"},
-      {path:'../../static/image/phone.png',title:"手机维修",url:"../phone/phone"},
-      {path:'../../static/image/nenny.png',title:"保姆",url:"../nenny/nenny"},
-      {path:'../../static/image/cleaning.png',title:"保洁清洗",url:"../cleaning/cleaning"},
-      {path:'../../static/image/Conduit.png',title:"管道疏通",url:"../Conduit/Conduit"},
-      {path:'../../static/image/moving.png',title:"搬家服务",url:"../moving/moving"},
-      {path:'../../static/image/plumber.png',title:"水电工",url:"../plumber/plumber"},
-      {path:'../../static/image/hourlyWork.png',title:"钟点工",url:"../hourlyWork/hourlyWork"},
-      {path:'../../static/image/laundry.png',title:"洗衣修鞋",url:"../laundry/laundry"},
-      {path:'../../static/image/more.png',title:"更多",url:"../more/more"}
+      {path:'../../static/image/disinfect.png',title:"消毒杀菌",url:"../shopList/shopList"},
+      {path:'../../static/image/phone.png',title:"手机维修",url:"../shopList/shopList"},
+      {path:'../../static/image/nenny.png',title:"保姆",url:"../shopList/shopList"},
+      {path:'../../static/image/cleaning.png',title:"保洁清洗",url:"../shopList/shopList"},
+      {path:'../../static/image/Conduit.png',title:"管道疏通",url:"../shopList/shopList"},
+      {path:'../../static/image/moving.png',title:"搬家服务",url:"../shopList/shopList"},
+      {path:'../../static/image/plumber.png',title:"水电工",url:"../shopList/shopList"},
+      {path:'../../static/image/hourlyWork.png',title:"钟点工",url:"../shopList/shopList"},
+      {path:'../../static/image/laundry.png',title:"洗衣修鞋",url:"../shopList/shopList"},
+      {path:'../../static/image/more.png',title:"更多",url:"../shopList/shopList"}
     ],
     // 服务
     tabarTitle: [
@@ -152,9 +152,19 @@ Page({
     return false;
   },
   onReachBottom() {
-    // // console.log(page + 1 )
-    // page = page + 1
-    // console.log(page)
+    // wx.showLoading({
+    // title: '玩命加载中',
+    // })
+    // var that = this
+    // setTimeout(function() {
+    //   wx.hideLoading();
+    //   var arr = that.data.person
+    //   var arr2 = that.data.person.concat(arr)
+    //   that.setData({
+    //     person: arr2
+    //   })
+    // },1000)
+   
   },
   // async init () {
   //   console.log(api)
@@ -167,11 +177,25 @@ Page({
     setTimeout(function() {
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh();
+      wx.showToast({
+        title: '刷新成功',
+        icon: 'none'
+      })
     },2000)
   },
   goServiceDeatil() {
     wx.navigateTo({
       url: '../serviceDetails/serviceDetail',
+    })
+  },
+  goShopHome() {
+    wx.navigateTo({
+      url: '../shopHome/shopHome',
+    })
+  },
+  goList() {
+    wx.navigateTo({
+      url: '../shopList/shopList',
     })
   }
 

@@ -65,7 +65,8 @@ Page({
       []
     ],
     // 选择完的时间
-    pickerSelect:''
+    pickerSelect:'',
+    isCollection: false
   },
 
   /**
@@ -181,10 +182,11 @@ Page({
     // selcet.vaule 选择的value selcet.column 第几列
     if( selcet.value != 0 && selcet.column == 0 ) {
       var item1 = 'multiArray['+1+']'
-      var setValue = 'value[' + 1 +']'
+      // var setValue = 'value[' + 1 +']'
       // 不是第一列
       that.setData({
         [item1]: pickerArr,
+        
       })
     } else if(selcet.value == 0 && selcet.column == 0) {
       // 第一列
@@ -193,5 +195,23 @@ Page({
         [item2]: that.data.pickerNewArr,
       })
     }
+  },
+  goShop() {
+    console.log('跳转店铺')
+    wx.navigateTo({
+      url: '../shopHome/shopHome',
+    })
+  },
+  share() {
+    console.log('分享')
+  },
+  collection() {
+    // console.log(收藏)
+    this.setData({
+      isCollection: !this.data.isCollection
+    })
+  },
+  goEvaluate() {
+    console.log('跳转评价界面')
   }
 })

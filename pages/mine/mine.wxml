@@ -1,12 +1,42 @@
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="box" style="height:{{height}}px">
+	<view class="head">
+		<view class="headContent">
+			<view class="headMessage">
+				<image src="../../static/image/banner.png" class="headImg"></image>
+				<view class="phone">1305****336</view>
+			</view>
+			<view>
+				<image src="../../static/image/pickerMore.png" class="arrow"></image>
+			</view>
+		</view>
+		<view class="state">
+			<view class="order" bindtap="goOrder">
+				<image src="../../static/image/oredr.png" mode="aspectFit"></image>
+				<text>订单</text>
+			</view>
+			<view class="order" bindtap="goMoney">
+				<image src="../../static/image/money.png" mode="aspectFit"></image>
+				<text>钱包</text>
+			</view>
+			<view class="order" bindtap="goColl">
+				<image src="../../static/image/collec.png" mode="aspectFit"></image>
+				<text>收藏</text>
+			</view>
+		</view>
+		<view class="list">
+			<view class="listMenu" wx:for="{{listMenu}}" wx:key="index" data-url="{{item.url}}" bindtap="goNext">
+				<view class="headMessage">
+					<image src="{{item.image}}" class="listImg"></image>
+					<view class="listText">{{item.text}}</view>
+				</view>
+				<view>
+					<image src="../../static/image/pickerMore.png" class="arrow" style="width:13rpx;height:20rpx;margin-top:40rpx"></image>
+				</view>
+			</view>
+		</view>
+    <view style="text-align:center;color:#ccc; font-size:24rpx;margin-top:20rpx">
+      <view>Copyright©2019-2020</view>
+      <view>上海呼吁网络科技有限公司 版权所有</view>
+    </view>
+	</view>
 </view>

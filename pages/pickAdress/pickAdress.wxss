@@ -1,8 +1,7 @@
 .box {
   width: 100%;
   height: 850rpx;
-  background: #fff;
-  padding: 0 30rpx;
+  background: #f0f0f0;
   box-sizing: border-box;
 }
 .title {
@@ -29,3 +28,61 @@
   font-size: 28rpx;
   font-weight: 400;
 }
+.adress {
+  background-color: #fff;
+  margin-bottom: 50rpx;
+}
+.adressList {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 24rpx;
+}
+.adressListInput {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 24rpx;
+}
+.adressListInput input{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+.arrow image {
+  display: block;
+  margin-top: 40rpx;
+  width: 13rpx;
+  height: 19rpx;
+}
+.picker {
+  width: 100%;
+  height: 100rpx;
+  z-index: 99;
+}
+.confirm {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  -moz-box-shadow: 0rpx 0rpx 4rpx #c8c4c4;
+  -webkit-box-shadow: 0px 0px 4rpx #c8c4c4;
+  box-shadow: 0px 0px 8rpx #c8c4c4;
+  color: #000;
+
+}
+.wx-switch-input{width:82rpx !important;height:40rpx !important;}
+.wx-switch-input::before{width:82rpx !important;height: 40rpx !important;}
+.wx-switch-input::after{width: 36rpx !important;height: 36rpx !important; right: 0 !important;}
+

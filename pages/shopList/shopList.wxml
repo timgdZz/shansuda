@@ -1,0 +1,24 @@
+<view class="box" style="height:{{height}}px">
+	<view class="personal">
+		<view class="personalSev" wx:for="{{person}}" wx:key="index">
+			<view class="personImg">
+				<image src="../../static/image/banner.png"></image>
+			</view>
+			<view class="personContent">
+				<image class="personHead" src="../../static/image/banner.png"></image>
+				<view class="personName">
+					<text class="personTitle">家政到家服务</text>
+					<text class="personBtn">家政服务</text>
+				</view>
+			</view>
+			<view class="Places">提供大山大河回啊空间打开大</view>
+			<view class="personDistance">
+				<view class="distance">
+					<image src="../../static/image/distance.png"></image>
+					3.00km
+				</view>
+				<view class="money">¥100</view>
+			</view>
+		</view>
+	</view>
+</view>

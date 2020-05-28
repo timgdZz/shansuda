@@ -15,27 +15,74 @@
 <view class="shadow"></view>
 <!-- 服务内容 -->
 <view class="content">
-	<view bindtap="close">服务内容</view>
-	<view>></view>
+	<view>服务内容</view>
+	<view class="arrow" bindtap="close">
+		<image src="../../static/image/pickerMore.png"></image>
+	</view>
 </view>
 <view class="shadow" style="height:4rpx"></view>
+<!-- 服务时间 -->
 <view class="time">
 	<view>服务时间 <text style="margin-left: 40rpx; color:#7d7d7d">{{pickerSelect}}</text></view>
 	<view>
-		<picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" value="{{value}}" bindchange="bindMuit" bindcolumnchange="bindScroll">></picker>
+		<picker class="arrow" mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" value="{{value}}" bindchange="bindMuit" bindcolumnchange="bindScroll">
+			<image src="../../static/image/pickerMore.png"></image>
+		</picker>
 	</view>
 </view>
 <view class="shadow"></view>
-
-
-
-
+<!-- 店铺信息 -->
+<view class="shop">
+	<view class="shopMessage">
+		<view class="shopImg">
+			<image src="../../static/image/banner.png"></image>
+		</view>
+		<view style="margin-left:15rpx">
+			<view class="shopName">家政公司</view>
+			<view class="shopPosition">位置信息</view>
+			<view class="shopContent">啦啦啦啦啦</view>
+		</view>
+	</view>
+	<view class="authentication">
+		<view><text>认证保障</text></view>
+		<image src="../../static/image/realName.png"></image>
+		<image src="../../static/image/skill.png"></image>
+	</view>
+</view>
+<view class="shadow"></view>
+<!-- 服务评价 -->
+<view class="evaluate">
+	<view>服务评价(0)</view>
+	<view bindtap="goEvaluate">查看全部</view>
+</view>
+<view class="shadow"></view>
+<!-- 服务信息 -->
+<view class="service">
+	
+	<view class="serviceTitle">服务信息</view>
+	<view class="serviceContent">服务详情</view>
+</view>
+<view class="shadow"></view>
 <!-- 遮罩动画 -->
-<!-- <view class="{{show ? 'box' :'box1'}}" bindtap="close">
-
-</view> -->
 <view class="boxAll">
 	<view class="{{show ? 'box' :'box1'}}" bindtap="close"> </view>
-
 	<view class="{{show ? 'picker' : 'picker1'}}"></view>
+</view>
+<!-- 下单 -->
+<view class="palceOrder">
+	<view class="icon">
+		<view class="shopIcon" bindtap="goShop">
+			<image src="../../static/image/shopIcon.png"></image>
+			<text>店铺</text>
+		</view>
+		<view class="shareIcon" bindtap="share">
+			<image src="../../static/image/share.png"></image>
+			<text>分享</text>
+		</view>
+		<view class="collIcon" bindtap="collection">
+			<image src="{{isCollection? '../../static/image/01.png' : '../../static/image/collection.png'}}"></image>
+			<text>收藏</text>
+		</view>
+	</view>
+	<view class="order">立即下单</view>
 </view>

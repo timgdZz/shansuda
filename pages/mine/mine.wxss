@@ -1,0 +1,99 @@
+.box {
+  background-color: #f0f0f0;
+  /* height: 1000rpx; */
+}
+.head {
+  position: relative;
+  width: 100%;
+  height: 370rpx;
+  background-color: #fe9127;
+  padding: 0 20rpx;
+  padding-top: 150rpx;
+  box-sizing: border-box;
+}
+.headContent {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.headMessage {
+  display: flex;
+}
+.headImg {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.listImg{
+  display: block;
+  margin-top: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.phone,
+.listText {
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  color: #fff;
+}
+.listText {
+  color: #000;
+  line-height: 100rpx;
+}
+.arrow {
+  display: block;
+  margin-top: 32.5rpx;
+  width: 23rpx;
+  height: 35rpx;
+}
+.state {
+  position: absolute;
+  bottom: -100rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: space-arounwidthd;
+}
+.order image {
+  display: block;
+  margin: 0 auto;
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+.order {
+  width: 33.3%;
+  padding-top: 40rpx;
+  height: 120rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  text-align: center;
+  text-align: center;
+}
+.list {
+  margin-top: 250rpx;
+  width: 100%;
+  height: 605rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.listMenu {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.listMenu:nth-last-of-type(1) {
+  border: none;
+}
