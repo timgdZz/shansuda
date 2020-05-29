@@ -1,3 +1,38 @@
-<view>
-修改密码
+<view class="box" >
+	<view class="title">
+		<view wx:for="{{title}}" wx:key="index" class=" {{currTab == index ?'active':''}}" data-index="{{index}}" bindtap="orderChoose">
+			<text>{{item.text}}</text>
+		</view>
+	</view>
+	<view wx:if="{{currTab == 0}}">
+		<view class="all">
+			<view class="boxTop">
+				<view class="boxImg">
+					<image src="../../static/image/banner.png"></image>
+					<text>太阳花婚礼策划</text>
+				</view>
+				<view>已取消</view>
+			</view>
+			<view class="boxContent">
+				<view class="boxContentTop">
+					<image src="../../static/image/banner.png"></image>
+					<view class="boxName">
+						<view style="margin-bottom:20rpx">华为但是速度加啊还多久啊</view>
+						<view>
+							<text>$768</text>
+							<text style="float:right">×1</text>
+						</view>
+					</view>
+				</view>
+				<view class="order" style="margin-bottom:10rpx"><text style="margin-right:10rpx">订单编号:</text><text>wb+6+++6+6+</text></view>
+				<view class="order"><text style="margin-right:10rpx">下单时间:</text><text>wb+6+++6+6+</text></view>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{currTab == 1}}">
+    没有更多啦~~~
+  </view>
+	<view wx:if="{{currTab == 2}}"></view>
+	<view wx:if="{{currTab == 3}}"></view>
+	<view wx:if="{{currTab == 4}}"></view>
 </view>

@@ -4,17 +4,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    height:''
+    height:'',
+    back:"",
+    list:[
+      {adress:'上海还好好',name:'daidai',phone:'1231231231231'},
+      {adress:'上海还好好1',name:'daidai1',phone:'1231231231231'},
+      {adress:'上海还好好2',name:'daidai2',phone:'1231231231231'},
+      {adress:'上海还好好3',name:'daidai3',phone:'1231231231231'},
+      {adress:'上海还好好4',name:'daidai4',phone:'1231231231231'}
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var phoneHeight = wx.getSystemInfoSync().windowHeight
-    this.setData({
-      height: phoneHeight
-    })
+    console.log(options.isBack)
+    if(options.isBack) {
+      this.setData({
+        back: 'back'
+      })
+    }
   },
 
   /**
@@ -66,8 +76,21 @@ Page({
     
   },
   goAdress(e) {
-    wx.navigateTo({
-      url: '../pickAdress/pickAdress',
-    })
+    if(this.data.back == 'back') {
+      var pages = getCurrentPages();
+      var prevPage = pages[pages.length - 2];
+      console.log(prevPage)
+      prevPage.setData({
+        adress: e.currentTarget.dataset.item
+      })
+      wx.navigateBack({
+        delta: 1
+      })
+    } else {
+      wx.navigateTo({
+        url: '../pickAdress/pickAdress',
+      })
+    }
+    
   }
 })

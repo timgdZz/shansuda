@@ -59,76 +59,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/map/map",
-					"pathName": "pages/map/map",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/release/release",
-					"pathName": "pages/release/release",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop/shop",
-					"pathName": "pages/shop/shop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/agency/agency",
-					"pathName": "pages/agency/agency",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/agency/agency",
-					"pathName": "pages/agency/agency",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/pickAdress/pickAdress",
-					"pathName": "pages/pickAdress/pickAdress",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/release/release",
-					"pathName": "pages/release/release",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/serviceDetails/serviceDetail",
-					"pathName": "pages/serviceDetails/serviceDetail",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shopHome/shopHome",
-					"pathName": "pages/shopHome/shopHome",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/mine/mine",
-					"pathName": "pages/mine/mine",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/adress/adress",
 					"pathName": "pages/adress/adress",
 					"query": "",
@@ -136,8 +66,30 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/pickAdress/pickAdress",
-					"pathName": "pages/pickAdress/pickAdress",
+					"name": "pages/money/money",
+					"pathName": "pages/money/money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myInfo/myInfo",
+					"pathName": "pages/myInfo/myInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/need/need",
+					"pathName": "pages/need/need",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
 					"scene": null
 				}
 			]

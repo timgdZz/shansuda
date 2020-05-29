@@ -9,17 +9,14 @@ Page({
     houseNumber:'',
     phone:'',
     username:'',
-    isCheck: true
+    isCheck: true,
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数--监听页面加载console.log(options.back)
    */
   onLoad: function (options) {
-    var phoneHeight = wx.getSystemInfoSync().windowHeight
-    this.setData({
-      height: phoneHeight
-    })
+    
   },
 
   /**
@@ -86,7 +83,6 @@ Page({
     })
   },
   selcetRegion(e) {
-    console.log(e)
     var region = '';
     e.detail.value.forEach(function(item,i) {
       if(i == 0) {

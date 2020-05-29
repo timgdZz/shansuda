@@ -1,6 +1,6 @@
 <view class="box" style="height:{{height}}px">
 	<view class="head">
-		<view class="headContent">
+		<view class="headContent" bindtap="goMyInfo">
 			<view class="headMessage">
 				<image src="../../static/image/banner.png" class="headImg"></image>
 				<view class="phone">1305****336</view>

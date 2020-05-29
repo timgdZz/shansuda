@@ -4,14 +4,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    title:[
+      {text:'全部'},
+      {text:'待支付'},
+      {text:'待接单'},
+      {text:'待服务'},
+      {text:'待评价'},
+    ],
+    currTab:0,
+    height:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var phoneHeight = wx.getSystemInfoSync().windowHeight
+    this.setData({
+      height: phoneHeight
+    })
   },
 
   /**
@@ -61,5 +72,11 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  orderChoose(e) {
+    var index = e.currentTarget.dataset.index
+    this.setData({
+      currTab: index
+    })
   }
 })

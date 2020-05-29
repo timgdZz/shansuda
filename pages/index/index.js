@@ -82,15 +82,18 @@ Page({
       {url:'https://www.huolala.cn/m/index.html?sources=SZ-Y-A-P-bd'},
       {url:'https://m.aihuishou.com/n/#/?utm_source=portal_redirect&version=new&type=0'},
       // 途牛 妈妈好 中国网库
-    ]
+    ],
+    adress: []
   },
   //事件处理函数
   onLoad: function() {
    
   },
+  onShow() {
+    // console.log(this.data.adress)
+  },
   tabbarActive(e) {
     var that = this
- 
     var index = e.currentTarget.dataset.active
     if(index == that.data.currentTab) {
       return false
@@ -145,7 +148,7 @@ Page({
   },
   goAdress() {
     wx.navigateTo({
-      url: '../pickAdress/pickAdress'
+      url: '../adress/adress?isBack=back'
     })
   },
   stopTouchMove() {
@@ -196,6 +199,11 @@ Page({
   goList() {
     wx.navigateTo({
       url: '../shopList/shopList',
+    })
+  },
+  goSearch() {
+    wx.navigateTo({
+      url: '../order/order',
     })
   }
 

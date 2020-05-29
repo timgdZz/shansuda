@@ -1,0 +1,82 @@
+page {
+  background-color: #f0f0f0;
+}
+.box {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.money {
+  width: 100%;
+  height: 390rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  text-align: center;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+ 
+}
+.account {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+.num {
+  margin-top: 20rpx;
+  font-size: 64rpx;
+  color: #fe0002;
+}
+.title {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.Recharge {
+  margin: 0 auto;
+  margin-top: 30rpx;
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #fe9127;
+  font-size: 24rpx;
+  color: #fff;
+
+}
+.frozen {
+  width: 100%;
+  height: 100rpx;
+  line-height: 98rpx;
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.frozenTitle {
+  float: left;
+}
+.frozenMoney {
+  float: right;
+  color: #fe0002;
+}
+.frozenTitle view {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.password {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 98rpx;
+  border: 1rpx solid #ccc;
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.password image {
+  width: 13rpx;
+  height: 19rpx;
+  margin-top: 40rpx;
+  float: right;
+}

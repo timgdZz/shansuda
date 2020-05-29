@@ -2,14 +2,17 @@
 <!-- 导航栏 -->
 <view class="indexBox">
 	<!-- <view class="topBgc"></view> -->
+
 	<view class="box forumCenter">
+		<view class="Geography">
+			<image src="../../static/image/position.png" style="margin-top:"></image>
+			<text>1231</text>
+			<view bindtap="goSearch">请输入您感兴趣的内容</view>
+		</view>
 		<!--轮播图 -->
 
 		<view class="swiper">
-			<view class="Geography">
-				<image src="../../static/image/position.png"></image>
-				<text>1231</text>
-			</view>
+
 			<swiper ndicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true' indicator-dots="true" indicator-active-color="#ff6203" class="swiperBox">
 				<block>
 					<swiper-item class="demo-text-1">
@@ -197,7 +200,7 @@
 			</swiper>
 		</view>
 		<!-- 热门服务 -->
-		<view class="hot" >
+		<view class="hot">
 			<view class="hotTitle">热门服务</view>
 			<view class="hotContent">
 
@@ -226,8 +229,8 @@
 					</view>
 					<view class="personDistance">
 						<view class="distance">
-						<image src="../../static/image/position.png"></image>
-						3.00km
+							<image src="../../static/image/position.png"></image>
+							3.00km
 						</view>
 						<view class="money">¥100</view>
 					</view>

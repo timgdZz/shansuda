@@ -27,25 +27,39 @@
   position: relative;
   width: 100%;
   border-radius: 10px;
-  padding-top: 20rpx;
+  padding-top: 10rpx;
   z-index: 9;
 }
 
 .Geography {
-  position: absolute;
+  position: relative;
   z-index: 9;
-  top: 12.7rpx;
-  left: 31.4rpx;
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
 }
 
 .Geography image {
-  width: 20.53rpx;
-  height: 26rpx;
+  width: 20rpx;
+  height: 24rpx;
   margin-right: 20rpx;
 }
 
 .Geography text {
-  font-size: 22rpx;
+  font-size: 24rpx;
+}
+.Geography view {
+  margin-top: 17rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  float: right;
+  width: 400rpx;
+  height: 50rpx;
+  line-height: 48rpx;
+  border-radius: 25rpx;
+  color: #909090;
+  border: 1rpx solid #000;
+  font-size: 24rpx;
 }
 .swiperBox {
   width:100%;

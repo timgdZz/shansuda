@@ -19,7 +19,13 @@
     "pages/lock/lock",
     "pages/order/order",
     "pages/money/money",
-    "pages/collec/collec"
+    "pages/collec/collec",
+    "pages/modifyPassword/modifyPassword",
+    "pages/myInfo/myInfo",
+    "pages/setPassword/setPassword",
+    "pages/ModifyNickname/ModifyNickname",
+    "pages/login/login",
+    "pages/register/register"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -46,7 +52,7 @@
         "selectedIconPath": "static/image/map1.png"
       },
       {
-        "pagePath": "pages/release/release",
+        "pagePath": "pages/shop/shop",
         "text": "发布需求",
         "iconPath": "static/image/need.png",
         "selectedIconPath": "static/image/need1.png"

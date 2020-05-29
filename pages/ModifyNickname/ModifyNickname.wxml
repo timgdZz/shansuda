@@ -1,0 +1,4 @@
+<view class="nickname">
+	<input placeholder="请填写您的昵称" value="{{value}}"></input>
+</view>
+<view class="save" bindtap="save">保存</view>

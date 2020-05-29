@@ -85,7 +85,7 @@ Page({
       url: '../order/order',
     })
   },
-  goMoeny() {
+  goMoney() {
     wx.navigateTo({
       url: '../money/money',
     })
@@ -93,6 +93,11 @@ Page({
   goColl() {
     wx.navigateTo({
       url: '../collec/collec',
+    })
+  },
+  goMyInfo() {
+    wx.navigateTo({
+      url: '../myInfo/myInfo',
     })
   }
 })

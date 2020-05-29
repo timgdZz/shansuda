@@ -1,0 +1,30 @@
+page {
+  background-color: #f0f0f0;
+}
+
+.nickname {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.nickname input {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+}
+
+.save {
+  margin: 0 auto;
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fe9127;
+  text-align: center;
+  color: #fff;
+
+}

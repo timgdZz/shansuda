@@ -1,3 +1,19 @@
-<view>
-修改密码
+<view class="box">
+  <view class="money">
+    <view class="account">账户余额(元)</view>
+    <view class="num">0</view>
+    <view class="title">充值下单,让您的生活更加方便快捷</view>
+    <view class="Recharge" bindtap="goRecharge">立即充值</view>
+  </view>
+</view>
+<view class="frozen">
+  <view class="frozenTitle">
+    <view style="font-size: 28rpx; margin-top:10rpx">冻结金额</view>
+    <view style="color:#ccc">冻结金额将会在24小时后自动转入可提现账户中</view>
+  </view>
+  <view class="frozenMoney">0元</view>
+</view>
+<view class="password" bindtap="goChangePassword">
+  <text>更改支付密码</text>
+  <image src="../../static/image/pickerMore.png"></image>
 </view>

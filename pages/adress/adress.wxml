@@ -3,11 +3,11 @@
 		新增
 	</view>
 	<view class="adress">
-		<view class="adressList" wx:for="{{6}}" wx:key="index"  bindtap="goAdress">
+		<view class="adressList" wx:for="{{list}}" wx:key="index"  bindtap="goAdress" data-item="{{item}}">
       <view class="adressBox">
-        <view>上海合适的话</view>
+        <view>{{item.adress}}</view>
         <view style="color:#ccc">
-          <text style="margin-right:20rpx">daidai</text><text>1325205552</text>
+          <text style="margin-right:20rpx">{{item.name}}</text><text>{{item.phone}}</text>
         </view>
       </view>
       <view>

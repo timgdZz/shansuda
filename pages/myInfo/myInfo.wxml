@@ -1,0 +1,35 @@
+<view class="list" style="margin-top:20rpx" bindtap="chooseImg">
+	<view class="listTitle">头像</view>
+	<view class="listInfo">
+		<image src="{{imgUrl}}" style="width:20rpx;height:20rpx;margin-right:10rpx;border-radius:10rpx"></image>
+		<image src="../../static/image/pickerMore.png"></image>
+	</view>
+</view>
+
+<view class="list" bindtap="goNickName">
+	<view class="listTitle">昵称</view>
+	<view class="listInfo">
+		<text style="margin-right:10rpx;color:#858585">{{nickname}}</text>
+		<image src="../../static/image/pickerMore.png"></image>
+	</view>
+</view>
+<picker mode="selector" range="{{sex}}" bindchange="selectSex">
+	<view class="list">
+		<view class="listTitle">性别</view>
+		<view class="listInfo">
+			<text style="margin-right:10rpx;color:#858585">{{sexName}}</text>
+			<image src="../../static/image/pickerMore.png"></image>
+		</view>
+	</view>
+</picker>
+<picker mode="date" bindchange="selcetDate" >
+	<view class="list">
+		<view class="listTitle">生日</view>
+		<view class="listInfo">
+			<text style="margin-right:10rpx;color:#858585">{{dateName}}</text>
+			<image src="../../static/image/pickerMore.png"></image>
+		</view>
+	</view>
+</picker>
+
+<view class="save"><text>保存</text></view>

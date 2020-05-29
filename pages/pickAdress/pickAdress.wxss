@@ -4,6 +4,9 @@
   background: #f0f0f0;
   box-sizing: border-box;
 }
+page {
+  background-color: #f0f0f0;
+}
 .title {
   font-size: 38rpx;
   font-weight: 700;

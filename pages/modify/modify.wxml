@@ -1,3 +1,13 @@
-<view>
-修改密码
+<view class="phone">
+  <text >绑定手机 :</text>
+  <text style="margin-left:20rpx">13222222222</text>
+</view>
+<view class="list">
+  <text>验证码 :</text>
+  <input placeholder="请填写您的验证码" t></input>
+  <view bindtap="message" class="message" bindtap="verification">{{btntext}}</view>
+</view>
+<view class="list">
+  <text>新密码 :</text>
+  <input placeholder="请填写您的新密码" type="password"></input>
 </view>

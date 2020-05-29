@@ -61,5 +61,17 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  goChangePassword() {
+    // console.log('跳转到支付界面')
+    wx.navigateTo({
+      url: '../modifyPassword/modifyPassword',
+    })
+  },
+  goRecharge() {
+    // console.log('立即充值界面')
+    // wx.navigateTo({
+    //   url: '../modifyPassword/modifyPassword',
+    // })
   }
 })
