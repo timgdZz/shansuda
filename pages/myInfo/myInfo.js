@@ -9,7 +9,7 @@ Page({
     imgUrl:'',
     sexName:'男',
     dateName:'',
-    nickname:''
+    nickname:'我叫mt'
   },
 
   /**
@@ -95,8 +95,9 @@ Page({
     })
   },
   goNickName() {
+    var that = this
     wx.navigateTo({
-      url: '../ModifyNickname/ModifyNickname',
+      url: '../ModifyNickname/ModifyNickname?nickname=' + that.data.nickname1,
     })
   }
 })

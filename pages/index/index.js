@@ -1,9 +1,12 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var api = require("../../utils/api")
+const api = app.globalData.api
+const url = app.globalData.url
+let that
 Page({
   data: {
+    bannerList:[],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -87,7 +90,8 @@ Page({
   },
   //事件处理函数
   onLoad: function() {
-   
+    that = this
+    that.init()
   },
   onShow() {
     // console.log(this.data.adress)
@@ -203,7 +207,33 @@ Page({
   },
   goSearch() {
     wx.navigateTo({
-      url: '../order/order',
+      url: '../search/search',
+    })
+  },
+  // 初始化
+  async init() {
+    await that.bannerList()
+    await that.homeTags()
+  },
+  async bannerList() {
+    await api.postData(url+'business/getBanner',{"bannerType" : 0})
+    .then((res) => {
+      if(res.code == 200 ) {
+        that.setData({
+          bannerList: res.data
+        })
+      }
+    })
+  },
+  async homeTags() {
+    await api.postData(url+'business/getSSDHomeTags',{"doType" : 0})
+    .then((res) => {
+      console.log(res)
+      if(res.code == 200) {
+        that.setData({
+          icon: res.data
+        })
+      }
     })
   }
 

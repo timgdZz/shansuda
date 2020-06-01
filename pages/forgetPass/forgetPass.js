@@ -4,21 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    value: ''
+    btntext: '获取验证码'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(options.nickname !== '' &&  options.nickname !="undefined") {
-      this.setData({
-        value: options.nickname
-      })
-    } else {
-      return false
-    }
-    
+
   },
 
   /**
@@ -31,7 +24,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (options) {
+  onShow: function () {
 
   },
 
@@ -69,30 +62,22 @@ Page({
   onShareAppMessage: function () {
 
   },
-  bindKeyInput(e) {
-    this.setData({
-      value: e.detail.value
-    })
-  },
-  save() {
-    var that = this
-    wx.showToast({
-      icon: 'none',
-      title: '保存成功',
-      duration: 1000,
-      success: function () {
-        setTimeout(function () {
-          var pages = getCurrentPages();
-          var prevPage = pages[pages.length - 2];
-          console.log(prevPage)
-          prevPage.setData({
-            nickname: that.data.value
+  verification() { // 点击获取验证码
+    //这里是要调api接口的，我这里就假装已经调成功了，返回200了
+    var _this = this
+    if (this.data.btntext == "获取验证码") {
+      var coden = 60 // 定义60秒的倒计时
+      var codeV = setInterval(function () {
+        _this.setData({ // _this这里的作用域不同了
+          btntext: '重新获取' + (--coden) + 's'
+        })
+        if (coden == -1) { // 清除setInterval倒计时，这里可以做很多操作，按钮变回原样等
+          clearInterval(codeV)
+          _this.setData({
+            btntext: '获取验证码'
           })
-          wx.navigateBack({
-            delta: 1
-          })
-        }, 1000)
-      }
-    })
+        }
+      }, 1000) //  1000是1秒
+    }
   }
 })

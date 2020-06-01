@@ -25,7 +25,10 @@
     "pages/setPassword/setPassword",
     "pages/ModifyNickname/ModifyNickname",
     "pages/login/login",
-    "pages/register/register"
+    "pages/register/register",
+    "pages/h/h",
+    "pages/search/search",
+    "pages/forgetPass/forgetPass"
   ],
   "window":{
     "backgroundTextStyle":"light",

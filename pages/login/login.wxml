@@ -6,16 +6,18 @@
 <view wx:if="{{currTab == 0}}" class="allMessage">
 	<view class="phone">
 		<image src="../../static/image/iphone.png"></image>
-		<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx"></input>
+		<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx" value="{{phoneNumber}}" bindinput="phoneCode"></input>
 	</view>
 	<view class="password">
 		<image src="../../static/image/lock.png" class="passwordImage "></image>
-		<input placeholder="请填写您的密码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:50rpx" type="{{type}}"></input>
+		<input placeholder="请填写您的密码" type="{{type}}"
+		placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:50rpx" 
+		bindinput="passInput"></input>
 		<image src="../../static/image/eye.png" class="close" bindtap="change"></image>
 	</view>
-	<view class="login">登录</view>
+	<view class="login" bindtap="encryption">登录</view>
 	<view class="text">
-		<text>忘记密码</text>
+		<text bindtap="goForget">忘记密码</text>
 		<text style="float:right" bindtap="register">没有账户?去注册</text>
 	</view>
 </view>
@@ -23,16 +25,18 @@
 <view wx:if="{{currTab == 1}}" class="allMessage">
 	<view class="phone">
 		<image src="../../static/image/iphone.png"></image>
-		<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx"></input>
+		<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx" bindinput="phoneCode" 
+		value="{{phoneNumber}}"></input>
 	</view>
 
 	<view class="password">
 		<image src="../../static/image/code.png" class="codeImage" style="width:39rpx;height:45rpx"></image>
-		<input placeholder="请输入验证码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx">
-		<text class="code" bindtap="verification">{{btntext}}</text>
+		<input placeholder="请输入验证码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx" bindinput="codeInput">
+		<text class="code" bindtap="verification" wx:if="{{btntext != ''}}">{{btntext}}</text>
+		<text class="code"  wx:if="{{btnNum != ''}}">{{btnNum}}</text>
 		</input>
 	</view>
-	<view class="login">登录</view>
+	<view class="login" bindtap="codeLogin">登录</view>
 </view>
 
 <view style="color:#fff; font-size:24rpx; text-align:center;margin-top: 40rpx">登录即代表同意《用户协议》</view>

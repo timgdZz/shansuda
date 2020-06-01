@@ -1,0 +1,92 @@
+.container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color:#FFF;
+}
+.nav_left{
+  width:25%;
+  height:100%;
+  background:#F2F2F2;
+  text-align:center;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.nav_left .nav_left_items{
+  height:100rpx;
+  line-height:100rpx;
+  font-size:28rpx;
+}
+.nav_left .nav_left_items.active{
+  position:relative;
+  /* background:#FFF; */
+  color:#3366cc;
+}
+.nav_left .nav_left_items.active::before{
+  display: inline-block;
+  width:6rpx;
+  height:60rpx;
+  background:#3366cc;
+  content:'';
+  position:absolute;
+  top:20rpx;
+  left:0;
+}
+ 
+/****************** 右方数据栏 *******************/
+.nav_right{
+  position:absolute;
+  top:0;
+  right:0;
+  width:75%;
+  height:100%;
+}
+ 
+.nav_right .nav_right_items{
+  float: left;   
+  width: 50%; 
+  text-align: center;  
+  padding:30rpx 0;
+} 
+.nav_right .nav_right_items image{
+  width: 180rpx;  
+  height: 180rpx; 
+} 
+.name1{
+  margin-top: 30rpx;
+  font-weight: bold;
+  font-size: 25rpx;
+  text-align: center;
+} 
+.name2{
+  margin-top: 20rpx;
+  font-size: 20rpx;
+} 
+.name3{
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  text-align: center;
+  color: #cc3333;
+  font-weight: bold;
+}  
+.nocate{
+  padding:100rpx;
+  text-align: center;  
+} 
+ 
+.nocate image{
+  width:70rpx;
+  height:70rpx;
+}
+.nocate text{
+  font-size:28rpx;
+  display:block;
+  color:#BBB;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

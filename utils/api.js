@@ -1,8 +1,12 @@
-const getData = (url, param) => {
+const getData = (url, param,token) => {
   return new Promise((resolve, reject) => {
     wx.request({
       url: url,
       method: 'GET',
+      header: {
+       'content-type': 'application/json',
+       'token': token
+      },
       data: param,
       success (res) {
         console.log(res)
@@ -17,18 +21,19 @@ const getData = (url, param) => {
 }
 
 // request post 请求
-const postData = (url, param) => {
+const postData = (url, param,token) => {
   return new Promise((resolve, reject) => {
     wx.request({
       url: url,
       method: 'POST',
       data: param,
+      header: {
+        token: token
+      },
       success (res) {
-        console.log(res)
         resolve(res.data)
       },
       fail (err) {
-        console.log(err)
         reject(err)
       }
     })

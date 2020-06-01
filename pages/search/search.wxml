@@ -1,0 +1,11 @@
+<view class="box">
+  <input placeholder="请输入您感兴趣的内容" bindinput="bindKeyInput">
+    <image src="../../static/image/search.png" mode="aspectFit"></image>
+  </input>
+  <text bindtap="code">搜索</text>
+</view>
+<view class="history">
+  <view wx:for="{{historyArr}}" wx:key="index" bindtap="goDeatils">{{item}}</view>
+</view>
+<!-- <view bindtap="code1">测试域名</view> -->
+<view class="clear" bindtap="clear">清空</view>

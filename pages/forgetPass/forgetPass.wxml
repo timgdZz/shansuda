@@ -1,0 +1,14 @@
+
+<view class="list">
+  <text>手机号 :</text>
+  <input placeholder="请填写手机号" type="password"></input>
+</view>
+<view class="list">
+  <text>验证码 :</text>
+  <input placeholder="请填写您的验证码" t></input>
+  <view bindtap="message" class="message" bindtap="verification">{{btntext}}</view>
+</view>
+<view class="list">
+  <text>新密码 :</text>
+  <input placeholder="请填写您的新密码" type="password"></input>
+</view>

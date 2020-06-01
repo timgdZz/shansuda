@@ -7,22 +7,16 @@
 		<view class="Geography">
 			<image src="../../static/image/position.png" style="margin-top:"></image>
 			<text>1231</text>
-			<view bindtap="goSearch">请输入您感兴趣的内容</view>
+			<view bindtap="goSearch"><image src="../../static/image/search.png"></image><text>请输入您感兴趣的内容</text></view>
 		</view>
 		<!--轮播图 -->
 
 		<view class="swiper">
 
-			<swiper ndicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true' indicator-dots="true" indicator-active-color="#ff6203" class="swiperBox">
+			<swiper ndicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='4000' circular='true' indicator-dots="true" indicator-active-color="#ff6203" class="swiperBox">
 				<block>
-					<swiper-item class="demo-text-1">
-						<image src="../../static/image/banner.png"></image>
-					</swiper-item>
-					<swiper-item class="demo-text-1">
-						<image src="../../static/image/banner.png"></image>
-					</swiper-item>
-					<swiper-item class="demo-text-1">
-						<image src="../../static/image/banner.png"></image>
+					<swiper-item class="demo-text-1" wx:for="{{bannerList}}" wx:key="index">
+						<image src="{{item.imgUrl}}" mode="widthFix"></image>
 					</swiper-item>
 				</block>
 			</swiper>
@@ -32,13 +26,13 @@
 		<view class="banner">
 			<view class="bannerBox">
 				<view wx:for="{{icon}}" wx:key="index" class="iconBox">
-					<navigator url='{{item.url}}' hover-class="noshadow">
+					<!-- <navigator url='{{item.url}}' hover-class="noshadow"> -->
 						<!-- <image :src="{{icon}}[index].path"></image> -->
 						<view>
-							<image src="{{item.path}}" mode="aspectFit"></image>
+							<image src="{{item.imgUrl}}" mode="aspectFit"></image>
 						</view>
 						{{item.title}}
-					</navigator>
+					<!-- </navigator> -->
 				</view>
 			</view>
 		</view>

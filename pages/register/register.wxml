@@ -8,21 +8,21 @@
 	<view>
 		<view class="phone">
 			<image src="../../static/image/iphone.png"></image>
-			<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx"></input>
+			<input placeholder="请填写您的手机号" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx" bindinput="phoneInput"></input>
 		</view>
 		<view class="password">
 			<image src="../../static/image/code.png" class="codeImage" style="width:39rpx;height:45rpx"></image>
-			<input placeholder="请输入验证码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx">
-			<text class="code" bindtap="verification">{{btntext}}</text>
+			<input placeholder="请输入验证码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:40rpx" bindinput="codeInput">
+			<text class="code" bindtap="verification" wx:if="{{btnNum != ''}}">{{btnNum}}</text>
+			<text class="code" bindtap="verification" wx:else>{{btntext}}</text>
 			</input>
 		</view>
 		<view class="password">
 			<image src="../../static/image/lock.png" class="passwordImage "></image>
-			<input placeholder="请填写您的密码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:50rpx" type="{{type}}"></input>
+			<input placeholder="请填写您的密码" placeholder-class="placeholder" style="width:400rpx;height:80rpx;margin-left:50rpx" type="{{type}}" bindinput="passInput"></input>
 			<image src="../../static/image/eye.png" class="close" bindtap="change"></image>
 		</view>
-		<view class="login">登录</view>
+		<view class="login" bindtap="encryption">注册</view>
 	</view>
-
-	<view style="color:#fff; font-size:24rpx; text-align:center;margin-top: 40rpx">登录即代表同意《用户协议》</view>
+	<view style="color:#fff; font-size:24rpx; text-align:center;margin-top: 40rpx">注册即代表同意《用户协议》</view>
 </view>

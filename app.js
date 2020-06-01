@@ -1,6 +1,10 @@
 //app.js
+
+const api = require('./utils/api')
+let that
 App({
   onLaunch: function () {
+    that = this
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,9 +36,35 @@ App({
         }
       }
     })
+    wx.getStorage({
+      key: 'token',
+      success(res) {
+        that.globalData.token = res.data
+      },
+      fail(err) {
+        console.log(err)
+        wx.setStorage({
+          data: '',
+          key: 'token',
+        })
+      }
+    }),
+    wx.getStorage({
+      key: 'user',
+      success(res) {
+        that.globalData.user = res.data
+        // console.log(that.globalData.user)
+      },
+      fail(err) {
+      }
+    })
+
   },
   globalData: {
-    userInfo: null
-  },
-  
+    userInfo: null,
+    user:{},
+    token: '',
+    api,
+    url:'https://www.api.huyussd.cn/ssd/'
+  }
 })

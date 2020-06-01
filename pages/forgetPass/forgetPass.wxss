@@ -1,0 +1,45 @@
+page {
+  background-color: #f0f0f0;
+}
+.phone {
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #979797;
+}
+.list {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e7e7e7 ;
+  line-height: 80rpx;
+  font-size: 24rpx;
+}
+.list input {
+  width: 400rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+.save {
+  margin: 0 auto;
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fe9127;
+  text-align: center;
+  color: #fff;
+}
+.message {
+  position: absolute;
+  right: 0;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fe9127;
+  text-align: center;
+  color: #fff;
+}
